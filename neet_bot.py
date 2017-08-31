@@ -3,9 +3,9 @@ import urllib.request
 
 import discord
 from bs4 import BeautifulSoup
-from neet_bot import log_parser
+from neet_bot.log_parser import *
 
-TOKEN = log_parser.get_api_from_config("settings.conf", "Discord", "BOT_TOKEN")
+TOKEN = get_api_from_config("settings.conf", "Discord", "BOT_TOKEN")
 
 
 def make_soup(url):

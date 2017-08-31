@@ -36,7 +36,7 @@ def get_api_from_config(file_, header, parameter):
 	"""
 	fullpath = get_current_path(file_)
 	dir_name = os.path.dirname(fullpath)
-	parser = configparser.SafeConfigParser()
+	parser = configparser.ConfigParser()
 	parser.read(dir_name + "/" + file_)
 	return parser.get(header, parameter)
 
